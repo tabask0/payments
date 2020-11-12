@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+h1 {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	font-family: 'Anton', sans-serif;
+}
+
+.links {
+	display: flex;
+	justify-content: center;
+	margin: 10px 0 50px 0;
+}
+
+.payment {
+	margin: 0 20px 0 30px;
+}
+
+a {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

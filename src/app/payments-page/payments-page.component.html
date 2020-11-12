@@ -1,0 +1,44 @@
+<a class="btn btn-danger back" routerLink="/">Back</a>
+<div class="container paymentForm" >
+  <div>
+    <div class="formm">
+      <form name="paymentForm" #postForm="ngForm" (ngSubmit)="paymentPost(postForm.value)">
+        <div class="form-group">
+          <label for="creditCardNumber">Credit Card Number <i class="far fa-credit-card"></i></label>
+          <input type="number" class="form-control" id="creditCardNumber" required ngModel name="creditCardNumber" placeholder="ex: 1234 5678 9012 3456"/>
+        </div>
+        <div class="form-group">
+          <label for="cardholder">Card Holder <i class="fas fa-user-check"></i></label>
+          <input type="text" class="form-control" id="cardholder" required ngModel name="cardholder" placeholder="ex: John">
+        </div>
+        <div class="form-group">
+          <label for="expirationDate">Expiration Date <i class="far fa-calendar"></i></label>
+          <input type="month" min="2020-11" max="2030-11" class="form-control" id="expirationDate"  required ngModel name="expirationDate" placeholder="ex: 04-2030">
+        </div>
+        <div class="form-group">
+          <label for="securityCode">Security Code <i class="fas fa-user-shield"></i></label>
+          <input type="number" class="form-control" id="securityCode" required ngModel name="securityCode" placeholder="ex: 123"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          type = "number" maxlength = "3">
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount in <i class="fas fa-dollar-sign"></i></label>
+          <input type="number" min="1" class="form-control" id="amount" required ngModel name="amount" placeholder="ex: 300">
+        </div>
+
+        <div class="cards-icons">
+        <li>
+          <i class="fab fa-cc-visa cards"></i>
+          <i class="fab fa-cc-mastercard cards"></i>
+          <i class="fab fa-cc-paypal cards"></i>
+          <i class="fab fa-google-pay cards"></i>
+          <i class="fab fa-apple-pay cards"></i>
+       </li>
+        </div>
+
+        <button class="btn btn-primary" type="submit">
+          Pay
+        </button>
+      </form>
+    </div>
+  </div>
